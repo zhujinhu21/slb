@@ -52,8 +52,7 @@
 |AclId|String|否|监听绑定的访问策略组ID。当AclStatus参数的值为on时，该参数必选。
 
 |
-|HealthCheckConnectPort|Integer|否|健康检查使用的端口。取值：-   -520：使用监听配置的后端服务端口。
--   1-65535：健康检查的后端服务器的端口。
+|HealthCheckConnectPort|Integer|否|健康检查使用的端口。取值：-   1-65535：健康检查的后端服务器的端口。
 
 |
 |HealthyThreshold|Integer|否|健康检查连续成功多少次后，将后端服务器的健康检查状态由fail判定为success。取值：2-10
