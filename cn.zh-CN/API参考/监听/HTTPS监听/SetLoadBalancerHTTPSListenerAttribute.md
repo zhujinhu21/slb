@@ -16,7 +16,12 @@
 |ListenerPort|Integer|是|负载均衡实例前端使用的端口，取值：1-65535
 
 |
-|VServerGroupId|String|否|服务器组ID。|
+|VServerGroup|String|否|是否使用服务器组，取值：on | off \(默认值\)
+
+|
+|VServerGroupId|String|否|服务器组ID。当VServerGroup的值为on时，该参数必须指定。
+
+|
 |ServerCertificateId|String|是|服务器证书的ID。|
 |CACertificateId|String|否|CA证书ID。若既上传CA证书又上传服务器证书，即采用双向认证；若用户只上传服务器证书，即为单向认证。
 
