@@ -21,24 +21,24 @@ Instance fees are charged for Internet SLB instances to reserve a public IP.
 
 Instance fees of Internet SLB instances are billed as follows:
 
--   Instance fee = instance fee  \(USD/Hour\)  x instance reservation time
+-   Instance fee = instance price \(USD/Hour\) x instance reservation time
 
-    The reservation time is the period from the time the instance is created to the time when the instance is released.
+    The reservation time is the period from the time the instance is created to the time the instance is released.
 
 -   Instance fees are billed on an hourly basis. Partial hours are billed as full hours.
 
 
-The price in the following table is only for reference. Take the price on the console asstandard.
+The price in the following table is only for reference. Take the price on the console as standard.
 
 |Region|Instance fee \(USD/hour\)|
 |:-----|:------------------------|
 |China \(Hangzhou\)/China \(Beijing\)/China \(Shenzhen\)/ China \(Shanghai\)/China \(Zhangjiakou\)|0.003|
 |China \(Qingdao\)|0.003|
-|Hong Kong|0.009|
+|China \(Hong Kong\)|0.009|
 |US \(Virginia\) /US \(Silicon Valley\)|0.005|
 |Singapore|0.006|
 |Japan \(Tokyo\)|0.009|
-|Germany \(Frankfurt\)|0.006|
+|EU Central 1 \(Frankfurt\)|0.006|
 |UAE \(Dubai\)|0.009|
 |Australia \(Sydney\)|0.006|
 
@@ -62,11 +62,11 @@ Traffic fees of Internet SLB instances are billed as follows:
     |:-----|:-----------------------|
     |China \(Hangzhou\)/China \(Beijing\)/China \(Shenzhen\)/China \(Shanghai\)/ China \(Zhangjiakou\)|0.125|
     |China \(Qingdao\)|0.113|
-    |Hong Kong|0.156|
+    |China \(Hong Kong\)|0.156|
     |US \(Virginia\) /US \(Silicon Valley\)|0.078|
     |Singapore|0.117|
     |Japan \(Tokyo\)|0.120|
-    |Germany \(Frankfurt\)|0.070|
+    |EU Central 1 \(Frankfurt\)|0.070|
     |UAE \(Dubai\)|0.447|
     |Australia \(Sydney\)|0.130|
 
@@ -77,8 +77,8 @@ Guaranteed-performance instances provide guaranteed performance metrics \(perfor
 
 For example, if you purchase the slb.s3.large capacity \(1,000,000; CPS 500,000; QPS 50,000\) and the actual usage of your instance in an hour is as follows:
 
-|Max Connection|CPS|QPS|
-|:-------------|:--|:--|
+| Max Connection|CPS|QPS|
+|:--------------|:--|:--|
 |90,000|4,000|11,000|
 
 -   From the perspective of Max Connection, the actual metrics 90,000 occurs between the limit 50,000 defined in the Standard I \(slb.s2.small\) capacity and the limit 100,000 defined in the Standard II \(slb.s2.medium\) capacity. Therefore, the capacity of the Max Connection metrics in this hour is Standard II \(slb.s2.medium\).
@@ -92,14 +92,14 @@ For example, if you purchase the slb.s3.large capacity \(1,000,000; CPS 500,000;
 
 The following figure shows how the capacity fee is billed for an SLB instance in the first three hours:
 
-![](../DNslb1864977/images/3113_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/13419/6420_en-US.png)
 
 The billing of the guaranteed-performance instances is flexible.  The performance capacity selected when purchasing an instance is the performance limitation of the SLB instance. For example, if slb.s3.medium is selected, the new connections are dropped when the HTTP requests in one second reach 30,000.
 
-The price in the following table is only for reference. Take the price on the console as standard. Capacity fees of guaranteed-performance instances in the international regions enjoy an 83% discount.
+The price in the following table is only for reference. Take the price on the console as standard. Capacity fees of guaranteed-performance instances in the international regions can enjoy an 83% discount.
 
-|Region|Capacity| Max Connection|CPS|QPS|Capacity price \(USD/Hour\)|
-|:-----|:-------|:--------------|:--|:--|:--------------------------|
+|Region|Specification| Max Connection|CPS|QPS|Capacity price \(USD/Hour\)|
+|:-----|:------------|:--------------|:--|:--|:--------------------------|
 | China \(Hangzhou\)
 
  China \(Zhangjiakou\)
@@ -132,7 +132,7 @@ The price in the following table is only for reference. Take the price on the co
 
  US \(Virginia\)
 
- Hong Kong
+ China \(Hong Kong\)
 
  |Capacity 1: Small I \(slb.s1.small\)|5,000|3,000|1,000|Free|
 |Capacity 2: Standard I \(slb.s2.small\)|50,000|5,000|5,000|0.06|
