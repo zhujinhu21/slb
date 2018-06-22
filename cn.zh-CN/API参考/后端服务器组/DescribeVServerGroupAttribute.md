@@ -28,6 +28,10 @@
 |ServerId|String|ECS实例ID。|
 |Port|Integer|后端服务器使用的端口。|
 |Weight|Integer|后端服务器的权重。|
+|Type|String|后端服务器类型，取值：-   ecs：ECS实例（默认）
+-   eni：弹性网卡实例
+
+|
 
 ## 示例 {#section_oxr_pds_cz .section}
 
