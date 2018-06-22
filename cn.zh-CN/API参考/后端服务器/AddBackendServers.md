@@ -22,6 +22,10 @@
 |Weight|Integer|否|后端服务器的权重，取值 ：\[0,100\]默认值为100。如果值为0，则不会将请求转发给该后端服务器。
 
 |
+|Type|String|是|后端服务器类型，取值：-   ecs：ECS实例（默认）
+-   eni：弹性网卡实例
+
+|
 
 ## 返回参数 {#section_ssd_pds_cz .section}
 
@@ -60,12 +64,14 @@ https://slb.aliyuncs.com/?Action=AddBackendServers
     	<LoadBalancerId>139a00604ad-cn-east-hangzhou-01</LoadBalancerId>
     	<BackendServers>
     		<BackendServer>
-    			<ServerId>vm-233</ServerId>
+    			<ServerId>eni-231</ServerId>
     			<Weight>100</Weight>
+                            <Type>eni</Type>
     		</BackendServer>
     		<BackendServer>
-    			<ServerId>vm-234</ServerId>
+    			<ServerId>eni-233</ServerId>
     			<Weight>100</Weight>
+                            <Type>eni</Type>
     		</BackendServer>
     	</BackendServers>
     </AddBackendServersResponse>
@@ -80,12 +86,14 @@ https://slb.aliyuncs.com/?Action=AddBackendServers
       "BackendServers": {
         "BackendServer": [
           {
-            "ServerId": "vm-233",
-            "Weight": 100
+            "ServerId": "eni-231",
+            "Weight": 100,
+            "Type":"eni",
           },
           {
-            "ServerId": "vm-234",
-            "Weight": 100
+            "ServerId": "eni-233",
+            "Weight": 100,
+            "Type":"eni"
           }
         ]
       }
