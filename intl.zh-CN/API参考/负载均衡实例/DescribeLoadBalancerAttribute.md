@@ -40,7 +40,7 @@
 |BackendServers|List|负载均衡实例的后端服务器列表。|
 |MasterZoneId|String|负载均衡实例的主可用区ID。|
 |SlaveZoneId|String|负载均衡实例的备可用区ID。|
-|LoadBalancerSpec|String|负载均衡实例的的性能规格。如果取值为空，则代表是性能保障型实例。
+|LoadBalancerSpec|String|负载均衡实例的的性能规格。如果取值为空，则代表是性能共享型实例。
 
 |
 
