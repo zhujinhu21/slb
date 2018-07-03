@@ -71,8 +71,7 @@
 
 |
 |HealthCheckURI|String|否|用于健康检查的URI。|
-|HealthCheckConnectPort|Integer|否|健康检查使用的端口。取值：-   -520：使用监听配置的后端服务端口。
--   1-65535：健康检查的后端服务器的端口。
+|HealthCheckConnectPort|Integer|否|健康检查使用的端口。取值：-   1-65535：健康检查的后端服务器的端口。
 
 |
 |HealthyThreshold|Integer|否|健康检查连续成功多少次后，将后端服务器的健康检查状态由fail判定为success。取值：2-10
@@ -95,6 +94,41 @@
 |Gzip|String|否|是否开启Gzip压缩，对特定文件类型进行压缩。取值：on（默认值）| off
 
 |
+|TLSCipherPolicy|String|否|只有性能保障型实例才可以指定TLSCipherPolicy参数，每种policy定义了一种安全策略，安全策略包含HTTPS可选的TLS协议版本和配套的加密算法套件。目前支持以下四种安全策略，详细区别请参见[\#d7e826](#d7e826)，请根据实际情况选择对应的policy。
+
+-   tls\_cipher\_policy\_1\_0：
+    -   支持TLS版本： TLSv1.0、TLSv1.2和TLSv1.1。
+    -   支持加密算法套件：ECDHE-RSA-AES128-GCM-SHA256、ECDHE-RSA-AES256-GCM-SHA384、ECDHE-RSA-AES128-SHA256、ECDHE-RSA-AES256-SHA384、AES128-GCM-SHA256、AES256-GCM-SHA384、AES128-SHA256、AES256-SHA256、ECDHE-RSA-AES128-SHA、ECDHE-RSA-AES256-SHA、AES128-SHA、AES256-SHA和DES-CBC3-SHA。
+-   tls\_cipher\_policy\_1\_1：
+    -   支持TLS版本： TLSv1.1和TLSv1.2。
+    -   支持加密算法套件：ECDHE-RSA-AES128-GCM-SHA256、ECDHE-RSA-AES256-GCM-SHA384、ECDHE-RSA-AES128-SHA256、ECDHE-RSA-AES256-SHA384、AES128-GCM-SHA256、AES256-GCM-SHA384、AES128-SHA256、AES256-SHA256、ECDHE-RSA-AES128-SHA、ECDHE-RSA-AES256-SHA、AES128-SHA、AES256-SHA和DES-CBC3-SHA。
+-   tls\_cipher\_policy\_1\_2
+    -   支持TLS版本：TLSv1.2。
+    -   支持加密算法套件：ECDHE-RSA-AES128-GCM-SHA256、ECDHE-RSA-AES256-GCM-SHA384、ECDHE-RSA-AES128-SHA256、ECDHE-RSA-AES256-SHA384、AES128-GCM-SHA256、AES256-GCM-SHA384、AES128-SHA256、AES256-SHA256、ECDHE-RSA-AES128-SHA、ECDHE-RSA-AES256-SHA、AES128-SHA、AES256-SHA和DES-CBC3-SHA。
+-   tls\_cipher\_policy\_1\_2\_strict
+    -   支持TLS版本：TLSv1.2。
+    -   支持加密算法套件：ECDHE-RSA-AES128-GCM-SHA256、ECDHE-RSA-AES256-GCM-SHA384、ECDHE-RSA-AES128-SHA256、ECDHE-RSA-AES256-SHA384、ECDHE-RSA-AES128-SHA和ECDHE-RSA-AES256-SHA。
+
+|
+
+## TLS安全策略差异说明 {#section_gd2_lnw_32b .section}
+
+|policy|tls\_cipher\_policy\_1\_0|tls\_cipher\_policy\_1\_1|tls\_cipher\_policy\_1\_2|tls\_cipher\_policy\_1\_2\_strict|
+|------|-------------------------|-------------------------|-------------------------|---------------------------------|
+|TLS| |1.2/1.1/1.0|1.2/1.1|1.2|1.2|
+|CIPHER|ECDHE-RSA-AES128-GCM-SHA256|✔|✔|✔|✔|
+|ECDHE-RSA-AES256-GCM-SHA384|✔|✔|✔|✔|
+|ECDHE-RSA-AES128-SHA256|✔|✔|✔|✔|
+|ECDHE-RSA-AES256-SHA384|✔|✔|✔|✔|
+|AES128-GCM-SHA256|✔|✔|✔| |
+|AES256-GCM-SHA384|✔|✔|✔| |
+|AES128-SHA256|✔|✔|✔| |
+|AES256-SHA256|✔|✔|✔| |
+|ECDHE-RSA-AES128-SHA|✔|✔|✔|✔|
+|ECDHE-RSA-AES256-SHA|✔|✔|✔|✔|
+|AES128-SHA|✔|✔|✔| |
+|AES256-SHA|✔|✔|✔| |
+|DES-CBC3-SHA|✔|✔|✔| |
 
 ## 返回参数 {#section_unk_d2c_ndb .section}
 
