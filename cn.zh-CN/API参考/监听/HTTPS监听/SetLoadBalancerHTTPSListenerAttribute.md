@@ -143,7 +143,7 @@
 ``` {#public}
 https://slb.aliyuncs.com/?Action=SetLoadBalancerHTTPSListenerAttribute
 &LoadBalancerId=lb-t4nj5vuz8ish9emfk1f20
-&ListenerPort=80
+&ListenerPort=443
 &BackendServerPort=80
 &ServerCertificateId=1231579085529123_15dbf6ff26f_1991415478_2054196746
 &Bandwidth=-1
