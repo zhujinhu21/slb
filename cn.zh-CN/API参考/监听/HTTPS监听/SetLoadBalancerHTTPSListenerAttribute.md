@@ -94,7 +94,7 @@
 |Gzip|String|否|是否开启Gzip压缩，对特定文件类型进行压缩。取值：on（默认值）| off
 
 |
-|TLSCipherPolicy|String|否|只有性能保障型实例才可以指定TLSCipherPolicy参数，每种policy定义了一种安全策略，安全策略包含HTTPS可选的TLS协议版本和配套的加密算法套件。目前支持以下四种安全策略，详细区别请参见[TLS安全策略差异说明](../cn.zh-CN/sharedContentSLB/TLS安全策略差异说明.md#)，请根据实际情况选择对应的policy。
+|TLSCipherPolicy|String|否|只有性能保障型实例才可以指定TLSCipherPolicy参数，每种policy定义了一种安全策略，安全策略包含HTTPS可选的TLS协议版本和配套的加密算法套件。目前支持以下四种安全策略，详细区别请参见[TLS安全策略差异说明](#section_uyg_xtx_32b)，请根据实际情况选择对应的policy。
 
 -   tls\_cipher\_policy\_1\_0：
     -   支持TLS版本： TLSv1.0、TLSv1.2和TLSv1.1。
@@ -111,7 +111,7 @@
 
 |
 
-## TLS安全策略差异说明 {#section_ob5_vzw_32b .section}
+## TLS安全策略差异说明 {#section_uyg_xtx_32b .section}
 
 |policy|tls\_cipher\_policy\_1\_0|tls\_cipher\_policy\_1\_1|tls\_cipher\_policy\_1\_2|tls\_cipher\_policy\_1\_2\_strict|
 |------|-------------------------|-------------------------|-------------------------|---------------------------------|
