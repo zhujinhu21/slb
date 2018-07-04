@@ -51,10 +51,12 @@
             当前端请求同时匹配多条域名规则时，规则的匹配优先级为：精确匹配 \> 小范围通配符匹配 \> 大范围通配符匹配，如下表所示（√代表匹配，—代表不匹配）。
 
             |模式|请求URL|域名规则|
-            |www.aliyun.com|\*.aliyun.com|\*.market.aliyun.com|
-            |精确匹配|www.aliyun.com|√|—|—|
-            |泛域名匹配|market.aliyun.com|—|√|—|
-            |泛域名匹配|info.market.aliyun.com|—|—|√|
+|www.aliyun.com|\*.aliyun.com|\*.market.aliyun.com|
+            |:-|:----|:---|
+            |:-------------|:------------|:-------------------|
+            |精确匹配|www.aliyun.com|✔|—|—|
+            |泛域名匹配|market.aliyun.com|—|✔|—|
+            |泛域名匹配|info.market.aliyun.com|—|—|✔|
 
         -   **证书**：选择该域名使用的证书。
 
