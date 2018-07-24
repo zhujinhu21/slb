@@ -13,7 +13,7 @@
  |
 |RegionId|String|是|负载均衡实例的地域ID。|
 |LoadBalancerId|String|是|负载均衡实例的ID。|
-|ListenerPort|Integer|是| 负载均衡实例HTTS监听的前端端口，取值：
+|ListenerPort|Integer|是| 负载均衡实例HTTPS监听的前端端口，取值：
 
  1-65535
 
