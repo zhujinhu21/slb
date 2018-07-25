@@ -12,6 +12,7 @@ Modify the configurations of a VServer group.
 |RegionId|String|Yes|The ID of the region where the Server Load Balancer instance is located.You can obtain the region ID by calling the DescribeRegions API.
 
 |
+|VServerGroupId|String|Yes|The ID of the VServer group.|
 |VServerGroupName|String|No|The name of the VServer group.|
 |BackendServers|List|No|The list of backend servers added to the VServer group.A VServer group can contain up to 20 backend servers.
 
