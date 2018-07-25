@@ -12,8 +12,9 @@
 |RegionId|String|是|负载均衡地域。您可以通过调用 DescribeRegions接口获取地域ID。
 
 |
-|VServerGroupName|String|否|服务器组名称。|
-|BackendServers|List|否|服务器组列表。一个服务器组最多可调用20个后端服务器。
+|VServerGroupId|String|否|虚拟服务器组ID。|
+|VServerGroupName|String|否|虚拟服务器组名称。|
+|BackendServers|List|否|虚拟服务器组列表。一个服务器组最多可调用20个后端服务器。
 
 如果不指定该参数，则创建一个空的服务器组列表。
 
