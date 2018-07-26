@@ -24,21 +24,21 @@
 2.  根据自己的服务器操作系统版本将x86\\Release或者 x64\\Release目录下的 F5XFFHttpModule.dll 和 F5XFFHttpModule.ini拷贝到某个目录，比如 C:\\F5XForwardedFor\\。确保IIS进程对该目录有读取权限。
 3.  打开**IIS管理器**，双击**模块**功能。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15325941673132_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15326057293132_zh-CN.png)
 
 4.  单击**配置本机模块**，然后在弹出的对话框中，单击**注册**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15325941673133_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15326057293133_zh-CN.png)
 
 5.  添加下载的.dll文件。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15325941683135_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15326057293135_zh-CN.png)
 
 6.  为添加的两个文件授权允许运行ISAPI和CGI扩展。
 
     **说明：** 确保您已经安装了ISAPI和CGI应用程序。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15325941683136_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/4171/15326057293136_zh-CN.png)
 
 7.  重启IIS服务器，等待配置生效。
 
@@ -63,7 +63,7 @@
      RPAFheader X-Forwarded-For
     ```
 
-    **说明：** 如果您要获取代理服务器的地址，可以将代理服务器的网段添加到`RPAFproxy_ips <IP_address>`，如负载均衡的IP地址段（100.64.0.0/10）和高防IP地址段。多个IP地址段用逗号分隔。
+    **说明：** 如果您要获取代理服务器的地址，可以将代理服务器的网段添加到`RPAFproxy_ips <IP_address>`，如负载均衡的IP地址段100.64.0.0/10（100.64.0.0/10 是阿里云保留地址，其他用户无法分配到该网段内，不会存在安全风险）和高防IP地址段。多个IP地址段用逗号分隔。
 
 3.  添加完成后重启Apache。
 
@@ -112,7 +112,7 @@
      real_ip_header X-Forwarded-For;
     ```
 
-    **说明：** 如果您要获取代理服务器的地址，可以将代理服务器的网段添加到`set_real_ip_from <IP_address>`，如负载均衡的IP地址段（100.64.0.0/10）和高防IP地址段。多个IP地址段用逗号分隔。
+    **说明：** 如果您要获取代理服务器的地址，可以将代理服务器的网段添加到`set_real_ip_from <IP_address>`，如负载均衡的IP地址段100.64.0.0/10（100.64.0.0/10 是阿里云保留地址，其他用户无法分配到该网段内，不会存在安全风险）和高防IP地址段。多个IP地址段用逗号分隔。
 
 4.  重启Nginx。
 
