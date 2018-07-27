@@ -2,7 +2,7 @@
 
 您已经创建了两个ECS实例，并授予SSH和Web端口的访问权限。
 
-以下示例中使用URL表示请求参数，并且没有将公共请求参数包含在内。构造完整的请求URL，请参见[负载均衡Open API](../cn.zh-CN/API参考/API概览.md#)。
+以下示例中使用URL表示请求参数，并且没有将公共请求参数包含在内。构造完整的请求URL，请参见[负载均衡Open API](../../../../cn.zh-CN/API参考/API概览.md#)。
 
 **说明：** 为方便阅读，示例中请求URL的参数值没有进行URL编码。
 
@@ -14,11 +14,13 @@
     }
 ```
 
-1.   调用CreateLoadBalancer接口创建一个负载均衡实例。 
+1.  调用CreateLoadBalancer接口创建一个负载均衡实例。 
 
     请求：
 
-    [https://slb.aliyuncs.com/?Action=CreateLoadBalancer&RegionId=cn-hangzhou-dg-a01](https://slb.aliyuncs.com/?Action=CreateLoadBalancer&RegionId=cn-hangzhou-dg-a01)
+    ```
+    https://slb.aliyuncs.com/?Action=CreateLoadBalancer&RegionId=cn-hangzhou
+    ```
 
     响应：
 
@@ -30,23 +32,29 @@
      }
     ```
 
-2.   调用CreateLoadBalancerHttpListener接口为创建好的负载均衡实例添加一个端口为80的HTTP监听。 
+2.  调用CreateLoadBalancerHttpListener接口为创建好的负载均衡实例添加一个端口为80的HTTP监听。 
 
     请求：
 
-    [https://slb.aliyuncs.com/?Action=CreateLoadBalancerHttpListener&LoadBalancerId=LoadBalancerId&ListenerPort=80&BackendServerPort=80&ListenerStatus=active](https://slb.aliyuncs.com/?Action=CreateLoadBalancerHttpListener&LoadBalancerId=LoadBalancerId&ListenerPort=80&BackendServerPort=80&ListenerStatus=active)
+    ```
+    https://slb.aliyuncs.com/?Action=CreateLoadBalancerHttpListener&LoadBalancerId=LoadBalancerId&ListenerPort=80&BackendServerPort=80&ListenerStatus=active
+    ```
 
-3.   调用SetLoadBalancerStatus接口激活负载均衡实例。 
-
-    请求：
-
-    [https://slb.aliyuncs.com/?Action=SetLoadBalancerStatus&LoadBalancerId=LoadBalancerId&LoadBalancerStatus=active](https://slb.aliyuncs.com/?Action=SetLoadBalancerStatus&LoadBalancerId=LoadBalancerId&LoadBalancerStatus=active)
-
-4.   调用AddBackendServers接口将一个ECS实例添加到负载均衡实例中。 
+3.  调用SetLoadBalancerStatus接口激活负载均衡实例。 
 
     请求：
 
-    [https://slb.aliyuncs.com/?Action=AddBackendServers&LoadBalancerId=LoadBalancerId&BackendServers=\[\{"ServerId":"ECS1InstanceID"\}](https://slb.aliyuncs.com/?Action=AddBackendServers&LoadBalancerId=LoadBalancerId&BackendServers=%5B%7B%22ServerId%22:%22ECS1InstanceID%22%7D)
+    ```
+    https://slb.aliyuncs.com/?Action=SetLoadBalancerStatus&LoadBalancerId=LoadBalancerId&LoadBalancerStatus=active
+    ```
+
+4.  调用AddBackendServers接口将一个ECS实例添加到负载均衡实例中。 
+
+    请求：
+
+    ```
+    https://slb.aliyuncs.com/?Action=AddBackendServers&LoadBalancerId=LoadBalancerId&BackendServers=[{"ServerId":"ECS1InstanceID"}]
+    ```
 
     响应
 
@@ -65,11 +73,13 @@
      }
     ```
 
-5.   再次调用**AddBackendServers**接口将另外一个ECS实例添加到负载均衡实例中。 
+5.  再次调用**AddBackendServers**接口将另外一个ECS实例添加到负载均衡实例中。 
 
     请求：
 
-    [https://slb.aliyuncs.com/?Action=AddBackendServers&LoadBalancerId=LoadBalancerId&BackendServers=\[\{"ServerId":"ECS2InstanceID"\}](https://slb.aliyuncs.com/?Action=AddBackendServers&LoadBalancerId=LoadBalancerId&BackendServers=%5B%7B%22ServerId%22:%22ECS2InstanceID%22%7D)
+    ```
+    https://slb.aliyuncs.com/?Action=AddBackendServers&LoadBalancerId=LoadBalancerId&BackendServers=[{"ServerId":"ECS2InstanceID"}]
+    ```
 
     响应
 
@@ -92,11 +102,13 @@
      }
     ```
 
-6.   调用DescribeLoadBalancerAttribute接口查询负载均衡实例的配置信息。 
+6.  调用DescribeLoadBalancerAttribute接口查询负载均衡实例的配置信息。 
 
     请求：
 
-    [https://slb.aliyuncs.com/?Action=DescribeLoadBalancerAttribute&LoadBalancerId=LoadBalancerId](https://slb.aliyuncs.com/?Action=DescribeLoadBalancerAttribute&LoadBalancerId=LoadBalancerId)
+    ```
+    https://slb.aliyuncs.com/?Action=DescribeLoadBalancerAttribute&LoadBalancerId=LoadBalancerId
+    ```
 
     响应：
 
