@@ -39,8 +39,8 @@
 
 ``` {#public}
 https://slb.aliyuncs.com/?Action=DescribeVServerGroups
-&RegionId=cn--hangzhou
-&VServerGroupId=rsp-cige6j5e7p
+&RegionId=cn-hangzhou
+&LoadBalancerId=lb-bp1yii0s312x83r3qpzke
 &公共请求参数
 ```
 
@@ -49,50 +49,61 @@ https://slb.aliyuncs.com/?Action=DescribeVServerGroups
 -   XML格式
 
     ```
-    <?xml version="1.0" encoding="utf-8"?>
-    <DescribeVServerGroupsResponse>
-    	<RequestId>9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C</RequestId>
-    	<VServerGroupId>rsp-cige6j5e7p</VServerGroupId>
-    	<VServerGroupName>Group1</VServerGroupName>
-    	<BackendServers>
-    		<BackendServer>
-    			<ServerId>vm-232</ServerId>
-    			<Port>80</Port>
-    			<Weight>100</Weight>
-                            <Type>ecs</Type>
-    		</BackendServer>
-    		<BackendServer>
-    			<ServerId>vm-233</ServerId>
-    			<Port>90</Port>
-    			<Weight>100</Weight>
-                            <Type>ecs</Type>
-    		</BackendServer>
-    	</BackendServers>
-    </DescribeVServerGroupsResponse>
+    <?xml version="1.0" encoding="UTF-8" ?>
+    	<VServerGroups>
+    		<VServerGroup>
+    			<VServerGroupId>rsp-bp1sqix4iuqyh</VServerGroupId>
+    			<VServerGroupName>test1</VServerGroupName>
+    			<AssociatedObjects>
+    				<Listeners></Listeners>
+    				<Rules></Rules>
+    			</AssociatedObjects>
+    		</VServerGroup>
+    		<VServerGroup>
+    			<VServerGroupId>rsp-bp1lv0r48xse4</VServerGroupId>
+    			<VServerGroupName>test2</VServerGroupName>
+    			<AssociatedObjects>
+    				<Listeners></Listeners>
+    				<Rules></Rules>
+    			</AssociatedObjects>
+    		</VServerGroup>
+    	</VServerGroups>
+    	<RequestId>B1B0F537-3F58-469F-8707-10CA36A17142</RequestId>
     ```
 
 -   JSON格式
 
     ```
     {
-      "RequestId": "9DEC9C28-AB05-4DDF-9A78-6B08EC9CE18C",
-      "VServerGroupId": "rsp-cige6j5e7p",
-      "VServerGroupName": "Group1",
-      "BackendServers": {
-        "BackendServer": [
-          {
-            "ServerId": "vm-233",
-            "Port": "80",
-            "Weight": "100"
-          },
-          {
-            "ServerId": "vm-232",
-            "Port": "90",
-            "Weight": "100"
-            "Type":"ecs"
-          }
-        ]
-      }
+        "VServerGroups": {
+            "VServerGroup": [
+                {
+                    "VServerGroupId": "rsp-bp1sqix4iuqyh", 
+                    "VServerGroupName": "test1", 
+                    "AssociatedObjects": {
+                        "Listeners": {
+                            "Listener": [ ]
+                        }, 
+                        "Rules": {
+                            "Rule": [ ]
+                        }
+                    }
+                }, 
+                {
+                    "VServerGroupId": "rsp-bp1lv0r48xse4", 
+                    "VServerGroupName": "test2", 
+                    "AssociatedObjects": {
+                        "Listeners": {
+                            "Listener": [ ]
+                        }, 
+                        "Rules": {
+                            "Rule": [ ]
+                        }
+                    }
+                }
+            ]
+        }, 
+        "RequestId": "B1B0F537-3F58-469F-8707-10CA36A17142"
     }
     ```
 
