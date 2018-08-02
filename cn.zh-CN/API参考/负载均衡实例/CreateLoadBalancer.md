@@ -32,7 +32,7 @@
 
 **说明：** 若不指定规格，则创建性能共享型实例。
 
-每个地域支持的规格不同。目前支持性能保障型实例的地域有：华北 1（青岛）、华北 2（北京）、华东 1（杭州）、华东 2（上海）、华南 1（深圳）、华北 3（张家口）、华北 5 （呼和浩特）、亚太东南 1（新加坡）和美国东部 1（弗吉尼亚）。关于每种规格的说明，参见[性能保障型实例](../cn.zh-CN/用户指南/负载均衡实例/性能保障型实例.md#)。
+每个地域支持的规格不同。目前支持性能保障型实例的地域有：华北 1（青岛）、华北 2（北京）、华东 1（杭州）、华东 2（上海）、华南 1（深圳）、华北 3（张家口）、华北 5 （呼和浩特）、亚太东南 1（新加坡）和美国东部 1（弗吉尼亚）。关于每种规格的说明，参见[性能保障型实例](../../../../cn.zh-CN/用户指南/负载均衡实例/性能保障型实例.md#)。
 
 |
 |LoadBalancerName|String|否|负载均衡实例的名称。长度为 2-128个字符，必须以英文字母开头，可包含数字，点号（.），下划线（\_）和短横线（-）。
@@ -44,7 +44,7 @@
 -   intranet：创建私网负载均衡实例后，系统会分配一个内网IP地址，仅可转发内网请求。
 
  |
-|VSwitchId|String|否|专有网络实例的所属交换机ID。**说明：** 指定该参数后，AddressType的值为会自动设置为intranet。
+|VSwitchId|String|否|负载均衡实例的所属交换机ID。**说明：** 指定该参数后，AddressType的值为会自动设置为intranet。
 
 |
 |PayType|String|否|实例的计费类型，取值：-   PayOnDemand:：按量付费
@@ -67,7 +67,7 @@
 **说明：** 当PayType参数的值为PrePay时，只支持按带宽计费。
 
 |
-|Bandwidth|Integer|否|按固定带宽计费方式的公网类型实例的带宽峰值。实例中的监听共享该带宽，详情参见[共享实例带宽](../cn.zh-CN/用户指南/监听/共享实例带宽.md#)。取值：\[1,5000\] \(单位：Mbps\)
+|Bandwidth|Integer|否|按固定带宽计费方式的公网类型实例的带宽峰值。实例中的监听共享该带宽，详情参见[共享实例带宽](../../../../cn.zh-CN/用户指南/监听/共享实例带宽.md#)。取值：\[1,5000\] \(单位：Mbps\)
 
 **说明：** 按流量计费的实例不需要指定该参数（即InternetChargeType为paybytraffic）。
 
@@ -76,6 +76,9 @@
 
 |
 |ResourceGroupId|String|否|企业资源组ID。|
+|AddressIPVersion|String|否|IP版本，可以设置为ipv4或者ipv6。**说明：** 目前，仅有华东1地域的E、F两个可用区支持创建ipv6实例且实例类型必须为性能保障型实例。
+
+|
 
 ## 返回参数 {#section_ugs_f1g_cz .section}
 
@@ -91,7 +94,7 @@
 |LoadBalancerName|String|负载均衡实例的名称。|
 |LoadBalancerSpec|String|负载均衡的实例规格。若没有指定规格，值为空（表示是性能共享型实例）。|
 
-## 示例 { .section}
+## 示例 {#section_py2_vly_22b .section}
 
 **请求示例**
 
@@ -100,6 +103,7 @@ https://slb.aliyuncs.com/?Action=CreateLoadBalancer
  &RegionId=cn-east-hangzhou-01
  &LoadBalancerName=abc
  &AddressType=internet
+ &AddressIPVersion=ipv4
  &InternetChargeType=paybytraffic
  &<公共请求参数>
 ```
