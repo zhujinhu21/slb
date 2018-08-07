@@ -21,7 +21,9 @@
 |RequestId|String|请求ID。|
 |MasterSlaveServerGroupId|String|主备服务器组ID。|
 |MasterSlaveServerGroupName|String|主备服务器组名称。|
-|MasterSlaveBackendServers|List|主备服务器组列表。|
+|MasterSlaveBackendServers|StringJSON格式的List
+
+|主备服务器组列表。|
 
 |名称|类型|描述|
 |:-|:-|:-|
