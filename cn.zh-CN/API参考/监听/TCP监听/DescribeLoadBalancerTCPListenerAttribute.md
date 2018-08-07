@@ -61,12 +61,20 @@
 |
 |HealthyThreshold|Integer|健康检查阈值。|
 |UnhealthyThreshold|Integer|不健康检查阈值。|
-|HealthCheckTimeout|Integer|超时时间。|
+|HealthCheckConnectTimeout|Integer|超时时间。|
 |HealthCheckConnectTimeout|Integer|每次健康检查响应的最大超时间，单位为秒。|
 |HealthCheckInterval|Integer|健康检查的时间间隔，单位为秒。|
 |HealthCheckDomain|String|用于健康检查的域名。|
 |HealthCheckURI|String|用于健康检查的URI。|
 |HealthCheckHttpCode|String|健康检查正常的HTTP状态码。|
+|SynProxy|String|是否开启SynProxy，SynProxy是负载均衡的攻击防护功能。建议一般情况下不要调整这个参数，由负载均衡控制。
+
+取值：
+
+-   enable：开启
+-   disable：关闭
+
+|
 
 ## 示例 {#section_oxr_pds_cz .section}
 
