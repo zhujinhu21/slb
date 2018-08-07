@@ -6,7 +6,7 @@
 
 |名称|类型|是否必须|描述|
 |:-|:-|:---|:-|
-|Action|String|是|要执行的操作。取值：RemoveListenerWhiteListItem
+|Action|String|是|要执行的操作，取值：RemoveListenerWhiteListItem
 
 |
 |RegionId|String|是|负载均衡实例的地域。您可以通过调用 DescribeRegions接口获取地域ID。
