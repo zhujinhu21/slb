@@ -20,7 +20,7 @@
 
 |
 |LoadBalancerID|String|是|负载均衡实例ID。|
-|Tags|List|是|要添加的Tag列表。最多可包含5个标签。
+|Tags|String|是|要添加的Tag列表。最多可包含5个标签。
 
 |
 
