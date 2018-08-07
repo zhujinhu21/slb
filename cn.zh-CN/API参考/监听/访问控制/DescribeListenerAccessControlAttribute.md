@@ -6,7 +6,7 @@
 
 |名称|类型|是否必须|描述|
 |:-|:-|:---|:-|
-|Action|String|是|要执行的操作。取值：DescribeListenerAccessControlAttribute
+|Action|String|是|要执行的操作，取值：DescribeListenerAccessControlAttribute
 
 |
 |LoadBalancerId|String|是|负载均衡实例的ID。|
