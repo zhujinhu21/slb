@@ -6,7 +6,7 @@
 
 |名称|类型|是否必须|描述|
 |--|--|----|--|
-|Action|String|是|要执行的操作。取值：DescribeSlbQuotas
+|Action|String|是|要执行的操作，取值：DescribeSlbQuotas
 
 |
 |RegionId|String|是|需要查询LoadBalancer资源约束的Region，适用于该Region下的所有负载均衡实例。|
@@ -15,7 +15,7 @@
 
 |名称|类型|描述|
 |--|--|--|
-|Quotas|List|请参见[\#table\_x1x\_k2l\_s2b](#table_x1x_k2l_s2b)。如果某个值没有返回，表示没有特殊配置，请根据[使用限制](https://help.aliyun.com/document_detail/32459.html?spm=a2c4g.11186623.6.543.7OYrpf)查询默认值。
+|Quotas|List|请参见[Quotas](#section_vyl_k2l_s2b)。如果某个值没有返回，表示没有特殊配置，请根据[使用限制](https://help.aliyun.com/document_detail/32459.html?spm=a2c4g.11186623.6.543.7OYrpf)查询默认值。
 
 |
 |Name|String|资源约束名称。|
