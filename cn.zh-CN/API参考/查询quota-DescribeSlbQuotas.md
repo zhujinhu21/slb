@@ -24,19 +24,19 @@
 
 ## Quotas {#section_vyl_k2l_s2b .section}
 
-|限制名称|限制英文名称|英文注解|配置来源|限制范围|规则中心的Action名称|默认值|
-|----|------|----|----|----|-------------|---|
-|服务器证书数量|server-cers-per-region|`Max number of Server certificates per region`|规则中心|Region单用户|certNum|100|
-|CA证书数量上限|client-ca-cers-per-region|`Max number of Client CA certificates per region`|规则中心|Region 单用户|certNum|100|
-|一个rs可以关联最大SLB的数量|slbs-per-backendserver|`Max number of SLB instances that a single backend server can be attached to`|规则中心|Region 中单SLB实例|vm\_lbs\_quota|50|
-|SLB后端可以挂载最大rs的数量|backendservers-per-slb|`Max number of backend servers can be attached to a single SLB instance`|规则中心|Region 中单SLB实例|lb\_vms\_quota|200|
-|SLB监听上限|listeners-per-slb|`Max number of listeners per SLB instance`|规则中心|Region 中单SLB实例|listenquato|50|
-|SLB的URL转发规则|rules-per-listener|`Max number of forwarding rule per listener`|规则中心|Region 中单SLB实例|viprulequota|20|
-|SNI扩展域名数量|domain-extensions-per-listener|`Max number of extension domains per listener`|规则中心|单实例+监听|domain\_extension\_count|3|
-|每个地域单账号可创建的访问控制策略组个数|acls-per-region|`Max number of access control lists per region`|规则中心|Region 账号|max\_acl\_number\_per\_region|50|
-|每个ACL规则可以关联监听的个数|listeners-per-acl|`Max number of listeners that an single access control list can be attached to`|规则中心|单监听|acl\_max\_vip\_quota|50|
-|每个访问控制策略组可包含的条目个数|entries-per-acl|`Max number of entries per access control list`|规则中心|单策略组|acl\_entry\_quota|300|
-|SLB购买数量|slbs-per-user|`Max number of SLB instances per account`|​用户标签|global|slb.num|60|
+|限制名称|限制英文名称|英文注解|限制范围|默认值|
+|----|------|----|----|---|
+|服务器证书数量|server-cers-per-region|`Max number of Server certificates per region`|Region单用户|100|
+|CA证书数量上限|client-ca-cers-per-region|`Max number of Client CA certificates per region`|Region 单用户|100|
+|一个rs可以关联最大SLB的数量|slbs-per-backendserver|`Max number of SLB instances that a single backend server can be attached to`|Region 中单SLB实例|50|
+|SLB后端可以挂载最大rs的数量|backendservers-per-slb|`Max number of backend servers can be attached to a single SLB instance`|Region 中单SLB实例|200|
+|SLB监听上限|listeners-per-slb|`Max number of listeners per SLB instance`|Region 中单SLB实例|50|
+|SLB的URL转发规则|rules-per-listener|`Max number of forwarding rule per listener`|Region 中单SLB实例|20|
+|SNI扩展域名数量|domain-extensions-per-listener|`Max number of extension domains per listener`|单实例+监听|3|
+|每个地域单账号可创建的访问控制策略组个数|acls-per-region|`Max number of access control lists per region`|Region 账号|50|
+|每个ACL规则可以关联监听的个数|listeners-per-acl|`Max number of listeners that an single access control list can be attached to`|单监听|50|
+|每个访问控制策略组可包含的条目个数|entries-per-acl|`Max number of entries per access control list`|单策略组|300|
+|SLB购买数量|slbs-per-user|`Max number of SLB instances per account`|global|60|
 
 ## 示例 {#section_qjx_rsp_42b .section}
 
