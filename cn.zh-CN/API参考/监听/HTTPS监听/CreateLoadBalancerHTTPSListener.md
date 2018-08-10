@@ -138,6 +138,9 @@
     -   支持加密算法套件：ECDHE-RSA-AES128-GCM-SHA256、ECDHE-RSA-AES256-GCM-SHA384、ECDHE-RSA-AES128-SHA256、ECDHE-RSA-AES256-SHA384、ECDHE-RSA-AES128-SHA和ECDHE-RSA-AES256-SHA。
 
  |
+|EnableHttp2|String|否|是否开启HTTP/2特性。取值：on（默认值）|off
+
+|
 
 ## TLS安全策略差异说明 {#section_ulc_g3q_32b .section}
 
