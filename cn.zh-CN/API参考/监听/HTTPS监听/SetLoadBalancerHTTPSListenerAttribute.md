@@ -94,6 +94,9 @@
 |Gzip|String|否|是否开启Gzip压缩，对特定文件类型进行压缩。取值：on（默认值）| off
 
 |
+|EnableHttp2|String|否|是否开启HTTP/2特性。取值：on（默认值）|off
+
+|
 |TLSCipherPolicy|String|否|只有性能保障型实例才可以指定TLSCipherPolicy参数，每种policy定义了一种安全策略，安全策略包含HTTPS可选的TLS协议版本和配套的加密算法套件。目前支持以下四种安全策略，详细区别请参见[TLS安全策略差异说明](#section_uyg_xtx_32b)，请根据实际情况选择对应的policy。
 
 -   tls\_cipher\_policy\_1\_0：
