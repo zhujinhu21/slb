@@ -13,25 +13,42 @@
 
 |
 |LoadBalancerId|String|是|负载均衡实例ID。|
+|**IncludeRule**|Boolean|否|返回关联的转发规则信息，默认值：false
+
+|
+|**IncludeListener**|Boolean|否|返回关联的监听信息，默认值：false
+
+|
 
 ## 返回参数 {#section_ssd_pds_cz .section}
 
 |名称|类型|描述|
-|:-|:-|:-|
-|RequestId|String|请求ID。|
-|VServerGroupId|String|服务器组ID。|
-|VServerGroupName|String|服务器组名称。|
-|BackendServers|List|后端服务器列表。|
+|--|--|--|
+|**RequestId**|String|请求ID。|
+|**VServerGroups**|List|虚拟服务器组列表。|
 
 |名称|类型|描述|
 |:-|:-|:-|
-|ServerId|String|ECS实例ID。|
-|Port|Integer|后端服务器使用的端口。|
-|Weight|Integer|后端服务器的权重。|
-|Type|String|后端服务器类型：-   ecs：ECS实例（默认）
--   eni
+|VServerGroupId|String|服务器组ID。|
+|VServerGroupName|String|服务器组名称。|
+|**AssociatedObjects**|Object|关联信息。|
 
-|
+|名称|类型|描述|
+|:-|:-|:-|
+|Rules|List|转发规则列表。|
+|Listeners|List|监听列表。|
+
+|名称|类型|描述|
+|--|--|--|
+|RuleId|String|转发规则ID。|
+|RuleName|String|转发规则名称。|
+|Domain|String|请求域名。|
+|Url|String|访问路径。|
+
+|名称|类型|描述|
+|--|--|--|
+|Protocol|String|监听协议。|
+|Port|Integer|监听端口。|
 
 ## 示例 {#section_oxr_pds_cz .section}
 
@@ -52,23 +69,23 @@ https://slb.aliyuncs.com/?Action=DescribeVServerGroups
     <?xml version="1.0" encoding="UTF-8" ?>
     	<VServerGroups>
     		<VServerGroup>
-    			<VServerGroupId>rsp-bp1sqix4iuqyh</VServerGroupId>
-    			<VServerGroupName>test1</VServerGroupName>
+    			<VServerGroupId>rsp-bp12bjrnykyp0</VServerGroupId>
+    			<VServerGroupName>6</VServerGroupName>
     			<AssociatedObjects>
     				<Listeners></Listeners>
     				<Rules></Rules>
     			</AssociatedObjects>
     		</VServerGroup>
     		<VServerGroup>
-    			<VServerGroupId>rsp-bp1lv0r48xse4</VServerGroupId>
-    			<VServerGroupName>test2</VServerGroupName>
+    			<VServerGroupId>rsp-bp16rt0dzbm23</VServerGroupId>
+    			<VServerGroupName>text2</VServerGroupName>
     			<AssociatedObjects>
     				<Listeners></Listeners>
     				<Rules></Rules>
     			</AssociatedObjects>
     		</VServerGroup>
     	</VServerGroups>
-    	<RequestId>B1B0F537-3F58-469F-8707-10CA36A17142</RequestId>
+    	<RequestId>E3F94C66-5DDD-4A6B-B37D-FD237FB31FE6</RequestId>
     ```
 
 -   JSON格式
@@ -78,8 +95,8 @@ https://slb.aliyuncs.com/?Action=DescribeVServerGroups
         "VServerGroups": {
             "VServerGroup": [
                 {
-                    "VServerGroupId": "rsp-bp1sqix4iuqyh", 
-                    "VServerGroupName": "test1", 
+                    "VServerGroupId": "rsp-bp12bjrnykyp0", 
+                    "VServerGroupName": "6", 
                     "AssociatedObjects": {
                         "Listeners": {
                             "Listener": [ ]
@@ -90,8 +107,8 @@ https://slb.aliyuncs.com/?Action=DescribeVServerGroups
                     }
                 }, 
                 {
-                    "VServerGroupId": "rsp-bp1lv0r48xse4", 
-                    "VServerGroupName": "test2", 
+                    "VServerGroupId": "rsp-bp16rt0dzbm23", 
+                    "VServerGroupName": "text2", 
                     "AssociatedObjects": {
                         "Listeners": {
                             "Listener": [ ]
@@ -103,7 +120,7 @@ https://slb.aliyuncs.com/?Action=DescribeVServerGroups
                 }
             ]
         }, 
-        "RequestId": "B1B0F537-3F58-469F-8707-10CA36A17142"
+        "RequestId": "E3F94C66-5DDD-4A6B-B37D-FD237FB31FE6"
     }
     ```
 
