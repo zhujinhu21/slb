@@ -37,7 +37,7 @@
 -   sch：基于源IP地址的一致性hash，相同的源地址会调度到相同的后端服务器。
 -   tch：基于四元组的一致性hash（源IP+目的IP+源端口+目的端口），相同的流会调度到相同的后端服务器。
 
-**说明：** 仅有性能保障型实例支持一致性hash算法。
+**说明：** 仅有性能保障型实例支持sch和tch一致性hash算法。
 
 |
 |PersistenceTimeout|Integer|否|会话保持的超时时间。取值：0-3600（秒）
@@ -100,11 +100,11 @@
 |UnhealthyThreshold|Integer|否|健康检查连续失败多少次后，将后端服务器的健康检查状态由success判定为fail。取值：2-10
 
 |
-|HealthCheckTimeout|Integer|否| 接收来自运行状况检查的响应需要等待的时间。如果后端ECS在指定的时间内没有正确响应，则判定为健康检查失败。
+|HealthCheckConnectTimeout|Integer|否| 接收来自运行状况检查的响应需要等待的时间。如果后端ECS在指定的时间内没有正确响应，则判定为健康检查失败。
 
  取值：1-300（秒）
 
- **说明：** 如果HealthCHeckTimeout的值小于HealthCheckInterval的值，则HealthCHeckTimeout无效，超时时间为HealthCheckInterval的值。
+ **说明：** 如果HealthCheckConnectTimeout的值小于HealthCheckInterval的值，则HealthCheckConnectTimeout无效，超时时间为HealthCheckInterval的值。
 
  |
 |HealthCheckInterval|Integer|否| 健康检查的时间间隔。
