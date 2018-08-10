@@ -65,6 +65,20 @@
 |HealthCheckHttpCode|String|健康检查正常的HTTP状态码。|
 |HealthCheckConnectPort|Integer|健康检查的端口。|
 |Gzip|String|是否开启Gzip压缩。|
+|**EnableHttp2**|String|是否开启HTTP/2特性。取值：on（默认值）|off
+
+|
+|Rules|List|监听下的转发规则列表，具体请参见[RuleList](#section_xpt_mtf_j2b)。|
+
+## RuleList {#section_xpt_mtf_j2b .section}
+
+|名称|类型|描述|
+|--|--|--|
+|RuleId|String|转发规则ID。|
+|RuleName|String|转发规则名称。|
+|Domain|String|域名。|
+|Url|String|访问路径。|
+|VServerGroupId|String|转发规则的目标服务器组ID。|
 
 ## 示例 {#section_sw5_23c_ndb .section}
 
