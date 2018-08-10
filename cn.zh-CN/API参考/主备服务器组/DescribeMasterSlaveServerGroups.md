@@ -13,32 +13,31 @@
 
 |
 |LoadBalancerId|String|是|负载均衡实例ID。|
+|IncludeListener|Boolean|否|返回关联的监听信息，默认值：false
+
+|
 
 ## 返回参数 {#section_ssd_pds_cz .section}
 
 |名称|类型|描述|
-|:-|:-|:-|
+|--|--|--|
 |RequestId|String|请求ID。|
-|MasterSlaveServerGroupId|String|主备服务器组ID。|
-|MasterSlaveServerGroupName|String|主备服务器组名称。|
-|MasterSlaveBackendServers|StringJSON格式的List
-
-|主备服务器组列表。|
+|MasterSlaveServerGroups|List|主备服务器组列表。|
 
 |名称|类型|描述|
 |:-|:-|:-|
-|ServerId|String|ECS实例ID。|
-|Port|String|后端服务器使用的端口。取值范围：1-65535
+|MasterSlaveServerGroupId|String|主备服务器组ID。|
+|MasterSlaveServerGroupName|String|主备服务器组名称。|
+|AssociatedObjects|Object|关联信息。|
 
-|
-|Weight|String| 后端服务器的权重，取值：\[0,100\]
+|名称|类型|描述|
+|:-|:-|:-|
+|Listeners|List|监听列表。|
 
- 默认值为100。如果值为0，则不会将请求转发给该后端服务器。
-
- |
-|ServerType|String|服务器类型，取值：Master（默认值） | Slave
-
-|
+|名称|类型|描述|
+|--|--|--|
+|Protocol|String|监听协议。|
+|Port|Integer|监听端口。|
 
 ## 示例 {#section_oxr_pds_cz .section}
 
